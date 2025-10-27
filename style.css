@@ -1522,3 +1522,31 @@ body {
 .archive-item.hidden {
     display: none;
 }
+/* =====
+ Empty State ===== */
+.empty-state {
+    text-align: center;
+    padding: var(--spacing-2xl) var(--spacing-md);
+    border: 3px solid var(--border);
+    background-color: var(--bg-secondary);
+    margin: var(--spacing-lg) 0;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-md);
+    opacity: 0.5;
+}
+
+.empty-title {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: 0.05em;
+}
+
+.empty-desc {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}

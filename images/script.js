@@ -1,3 +1,7 @@
+// Wrap everything in IIFE to avoid conflicts with Tistory's scripts
+(function() {
+    'use strict';
+
 // Theme Toggle
 const themeToggle = document.getElementById('themeToggle');
 const themeIcon = document.querySelector('.theme-icon');
@@ -283,3 +287,5 @@ if (filterBtns.length > 0) {
         });
     });
 }
+
+})(); // End of IIFE

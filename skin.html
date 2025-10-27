@@ -77,6 +77,14 @@
                     </article>
                     </s_article_rep>
 
+                    <s_article_rep_empty>
+                    <div class="empty-state">
+                        <div class="empty-icon">📝</div>
+                        <h3 class="empty-title">NO_ARTICLES_YET</h3>
+                        <p class="empty-desc">// 첫 번째 글을 작성해보세요</p>
+                    </div>
+                    </s_article_rep_empty>
+
                     <div class="view-all-section">
                         <a href="[##_blog_link_##]archive" class="view-all-btn">
                             <span>VIEW_ALL_ARTICLES</span>
@@ -286,6 +294,18 @@
         </div>
     </footer>
 
+    <script>
+        // Prevent jQuery conflicts from Tistory's common.js
+        (function() {
+            // Store original jQuery if it exists
+            if (typeof jQuery !== 'undefined') {
+                window._originalJQuery = jQuery;
+            }
+            if (typeof $ !== 'undefined') {
+                window._original$ = $;
+            }
+        })();
+    </script>
     <script src="./images/script.js"></script>
 </body>
 </html>
