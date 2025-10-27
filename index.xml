@@ -12,7 +12,7 @@
     <email>contact@example.com</email>
   </author>
   <default>
-    <recentEntries>3</recentEntries>
+    <recentEntries>10</recentEntries>
     <recentComments>5</recentComments>
     <recentTrackbacks>5</recentTrackbacks>
     <itemsOnGuestbook>10</itemsOnGuestbook>
@@ -27,6 +27,8 @@
     <lengthOfLink>30</lengthOfLink>
     <showListOnCategory>1</showListOnCategory>
     <showListOnArchive>1</showListOnArchive>
+    <showListOnIndex>1</showListOnIndex>
+    <entriesOnRecent>10</entriesOnRecent>
     <commentMessage>
       <none>댓글이 없습니다.</none>
       <single>댓글 <span class="cnt">#</span>개</single>
