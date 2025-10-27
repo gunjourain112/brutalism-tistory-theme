@@ -28,8 +28,8 @@
                 </div>
                 <nav class="nav">
                     <a href="[##_blog_link_##]" class="nav-link">/articles</a>
-                    <a href="[##_blog_link_##]/archive" class="nav-link">/archive</a>
-                    <a href="[##_blog_link_##]/guestbook" class="nav-link">/guestbook</a>
+                    <a href="[##_blog_link_##]archive" class="nav-link">/archive</a>
+                    <a href="[##_blog_link_##]guestbook" class="nav-link">/guestbook</a>
                     <button class="theme-toggle" id="themeToggle">
                         <span class="theme-icon">◐</span>
                     </button>
@@ -104,7 +104,7 @@
                 <div class="articles">
                     
                     <!-- Index Page: Latest 3 Articles -->
-                    <s_index>
+                    <s_index_article_rep>
                     <div class="section-header">
                         <h2 class="section-title">LATEST_ARTICLES</h2>
                         <div class="section-line"></div>
@@ -133,12 +133,12 @@
                     </s_article_rep>
 
                     <div class="view-all-section">
-                        <a href="[##_blog_link_##]/archive" class="view-all-btn">
+                        <a href="[##_blog_link_##]archive" class="view-all-btn">
                             <span>VIEW_ALL_ARTICLES</span>
                             <span class="arrow">→</span>
                         </a>
                     </div>
-                    </s_index>
+                    </s_index_article_rep>
 
                     <!-- Archive Page: All Articles by Year -->
                     <s_archive>
@@ -268,7 +268,7 @@
                     <div class="sidebar-box">
                         <h3 class="sidebar-title">// SEARCH</h3>
                         <div class="search-box">
-                            <form action="[##_blog_link_##]/search" method="get">
+                            <form action="[##_blog_link_##]search" method="get">
                                 <input type="text" name="q" placeholder="SEARCH..." class="search-input">
                                 <button type="submit" class="search-btn">→</button>
                             </form>
@@ -371,7 +371,7 @@
                             <a href="[##_rss_url_##]" class="subscribe-btn" target="_blank">
                                 <span>RSS</span>
                             </a>
-                            <a href="javascript:;" onclick="window.open('[##_blog_link_##]/admin/center/','_blank')" class="subscribe-btn">
+                            <a href="[##_blog_link_##]admin/center/" class="subscribe-btn" target="_blank">
                                 <span>이웃추가</span>
                             </a>
                         </div>
@@ -405,7 +405,7 @@
                 <div class="footer-text">© 2025 [##_title_##] // ALL_RIGHTS_RESERVED</div>
                 <div class="footer-links">
                     <a href="[##_blog_link_##]">HOME</a>
-                    <a href="[##_blog_link_##]/archive">ARCHIVE</a>
+                    <a href="[##_blog_link_##]archive">ARCHIVE</a>
                     <a href="[##_rss_url_##]" target="_blank">RSS</a>
                 </div>
             </div>
