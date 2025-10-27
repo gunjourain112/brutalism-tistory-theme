@@ -1550,3 +1550,104 @@ body {
     color: var(--text-secondary);
     font-size: 1rem;
 }
+
+/* ===== Article Detail ===== */
+.article-detail {
+    background-color: var(--bg-secondary);
+    border: 3px solid var(--border);
+    padding: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+}
+
+.article-detail-header {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 3px solid var(--border);
+}
+
+.article-meta-large {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.article-detail-title {
+    font-family: var(--font-mono);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.article-body {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xl);
+}
+
+.article-body h1,
+.article-body h2,
+.article-body h3 {
+    font-family: var(--font-mono);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.article-body p {
+    margin-bottom: var(--spacing-md);
+}
+
+.article-body code {
+    background-color: var(--bg-primary);
+    padding: 0.2em 0.4em;
+    border: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+}
+
+.article-body pre {
+    background-color: var(--bg-primary);
+    border: 3px solid var(--border);
+    padding: var(--spacing-md);
+    overflow-x: auto;
+    margin: var(--spacing-md) 0;
+}
+
+.article-body pre code {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.article-detail-footer {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+    border-top: 3px solid var(--border);
+}
+
+.tags-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.tags-label {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.comments-section {
+    margin-top: var(--spacing-xl);
+}
