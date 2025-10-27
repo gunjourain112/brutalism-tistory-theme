@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[##_page_title_##]</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
+    <link rel="canonical" href="[##_canonical_url_##]" />
+    <meta property="og:title" content="[##_page_title_##]" />
+    <meta property="og:url" content="[##_canonical_url_##]" />
+    <meta property="og:description" content="[##_desc_##]" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="[##_blog_link_##]" style="text-decoration: none; color: inherit;">
+                        <span class="logo-bracket">[</span>
+                        <span class="logo-text">[##_title_##]</span>
+                        <span class="logo-bracket">]</span>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="[##_blog_link_##]" class="nav-link">/articles</a>
+                    <a href="[##_blog_link_##]/archive" class="nav-link">/archive</a>
+                    <a href="[##_blog_link_##]/guestbook" class="nav-link">/guestbook</a>
+                    <button class="theme-toggle" id="themeToggle">
+                        <span class="theme-icon">◐</span>
+                    </button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span class="hamburger">☰</span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (Only on Main Page) -->
+    <s_index>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-main">
+                    <div class="hero-label">// [##_desc_##]</div>
+                    <h1 class="hero-title">
+                        PRODUCTION<br>
+                        <span class="highlight">SYSTEMS</span><br>
+                        AT SCALE
+                    </h1>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-value">[##_count_total_##]</div>
+                            <div class="stat-label">TOTAL POSTS</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">[##_count_today_##]</div>
+                            <div class="stat-label">TODAY</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">[##_count_total_##]</div>
+                            <div class="stat-label">VISITORS</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-side">
+                    <div class="terminal-box">
+                        <div class="terminal-header">
+                            <span class="terminal-dot"></span>
+                            <span class="terminal-dot"></span>
+                            <span class="terminal-dot"></span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span> cat /about.txt
+                            </div>
+                            <div class="terminal-line">
+                                [##_desc_##]
+                            </div>
+                            <div class="terminal-line">
+                                실전 경험 · 성능 최적화
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">$</span> <span class="cursor">_</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </s_index>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div class="main-grid">
+                <!-- Articles Section -->
+                <div class="articles">
+                    
+                    <!-- Index Page: Latest 3 Articles -->
+                    <s_index>
+                    <div class="section-header">
+                        <h2 class="section-title">LATEST_ARTICLES</h2>
+                        <div class="section-line"></div>
+                    </div>
+                    
+                    <s_article_rep>
+                    <article class="article-card">
+                        <div class="article-number">[##_article_rep_index_##]</div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-date">[##_article_rep_date_##]</span>
+                                <span class="article-tag">#[##_article_rep_category_##]</span>
+                            </div>
+                            <h3 class="article-title">
+                                <a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a>
+                            </h3>
+                            <p class="article-excerpt">
+                                [##_article_rep_summary_##]
+                            </p>
+                            <div class="article-footer">
+                                <span class="read-time">[##_article_rep_desc_##]</span>
+                                <a href="[##_article_rep_link_##]" class="read-more">READ_MORE →</a>
+                            </div>
+                        </div>
+                    </article>
+                    </s_article_rep>
+
+                    <div class="view-all-section">
+                        <a href="[##_blog_link_##]/archive" class="view-all-btn">
+                            <span>VIEW_ALL_ARTICLES</span>
+                            <span class="arrow">→</span>
+                        </a>
+                    </div>
+                    </s_index>
+
+                    <!-- Archive Page: All Articles by Year -->
+                    <s_archive>
+                    <div class="archive-header">
+                        <h1 class="archive-title">ARCHIVE</h1>
+                        <p class="archive-desc">// ALL_ARTICLES_BY_YEAR</p>
+                        
+                        <div class="archive-filters">
+                            <button class="filter-btn active" data-filter="all">ALL</button>
+                            <s_category_list>
+                            <button class="filter-btn" data-filter="[##_category_name_##]">[##_category_name_##]</button>
+                            </s_category_list>
+                        </div>
+                    </div>
+
+                    <s_article_rep>
+                    <article class="archive-item" data-category="[##_article_rep_category_##]">
+                        <div class="archive-date">[##_article_rep_date_##]</div>
+                        <div class="archive-content">
+                            <h3 class="archive-item-title">
+                                <a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a>
+                            </h3>
+                            <div class="archive-meta">
+                                <span class="archive-tag">#[##_article_rep_category_##]</span>
+                                <span class="archive-read">[##_article_rep_desc_##]</span>
+                            </div>
+                        </div>
+                    </article>
+                    </s_article_rep>
+                    </s_archive>
+
+                    <!-- Category Page -->
+                    <s_category>
+                    <div class="category-hero">
+                        <div class="category-hero-content">
+                            <h1 class="category-title">#[##_category_name_##]</h1>
+                            <p class="category-desc">// [##_category_description_##]</p>
+                            <div class="category-count">[[##_category_count_##] ARTICLES]</div>
+                        </div>
+                    </div>
+
+                    <s_article_rep>
+                    <article class="article-card">
+                        <div class="article-number">[##_article_rep_index_##]</div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-date">[##_article_rep_date_##]</span>
+                                <span class="article-tag">#[##_article_rep_category_##]</span>
+                            </div>
+                            <h3 class="article-title">
+                                <a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a>
+                            </h3>
+                            <p class="article-excerpt">
+                                [##_article_rep_summary_##]
+                            </p>
+                            <div class="article-footer">
+                                <span class="read-time">[##_article_rep_desc_##]</span>
+                                <a href="[##_article_rep_link_##]" class="read-more">READ_MORE →</a>
+                            </div>
+                        </div>
+                    </article>
+                    </s_article_rep>
+
+                    <div class="back-section">
+                        <a href="[##_blog_link_##]" class="back-btn">← BACK_TO_ALL_ARTICLES</a>
+                    </div>
+                    </s_category>
+
+                    <!-- Article Detail Page -->
+                    <s_article_protected>
+                    <div class="container-narrow">
+                        <article class="article-detail">
+                            <header class="article-detail-header">
+                                <div class="article-meta-large">
+                                    <span class="article-date">[##_article_rep_date_##]</span>
+                                    <span class="article-tag">#[##_article_rep_category_##]</span>
+                                    <span class="read-time">[##_article_rep_desc_##]</span>
+                                </div>
+                                <h1 class="article-detail-title">
+                                    [##_article_rep_title_##]
+                                </h1>
+                            </header>
+
+                            <div class="article-body">
+                                [##_article_rep_desc_##]
+                            </div>
+
+                            <footer class="article-detail-footer">
+                                <!-- Tags -->
+                                <div class="tags-section">
+                                    <div class="tags-label">// TAGS</div>
+                                    <div class="tags-list">
+                                        <s_tag_list>
+                                        <a href="[##_tag_link_##]" class="tag">[##_tag_name_##]</a>
+                                        </s_tag_list>
+                                    </div>
+                                </div>
+
+                                <!-- Comments -->
+                                <div class="comments-section">
+                                    <h3 class="sidebar-title">// COMMENTS</h3>
+                                    [##_article_rep_desc_##]
+                                </div>
+                            </footer>
+                        </article>
+                    </div>
+                    </s_article_protected>
+
+                    <!-- Guestbook -->
+                    <s_guest>
+                    <div class="container-narrow">
+                        <div class="archive-header">
+                            <h1 class="archive-title">GUESTBOOK</h1>
+                            <p class="archive-desc">// LEAVE_YOUR_MESSAGE</p>
+                        </div>
+                        <div class="guestbook-content">
+                            [##_guest_rep_desc_##]
+                        </div>
+                    </div>
+                    </s_guest>
+
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-box">
+                        <h3 class="sidebar-title">// SEARCH</h3>
+                        <div class="search-box">
+                            <form action="[##_blog_link_##]/search" method="get">
+                                <input type="text" name="q" placeholder="SEARCH..." class="search-input">
+                                <button type="submit" class="search-btn">→</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="sidebar-box">
+                        <h3 class="sidebar-title">// CATEGORIES</h3>
+                        <ul class="category-list">
+                            <s_category_list>
+                            <li><a href="[##_category_link_##]">> [##_category_name_##] <span>[[##_category_count_##]]</span></a></li>
+                            </s_category_list>
+                        </ul>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="sidebar-box">
+                        <h3 class="sidebar-title">// TAGS</h3>
+                        <div class="tag-grid">
+                            <s_tag_list>
+                            <a href="[##_tag_link_##]" class="tag">[##_tag_name_##]</a>
+                            </s_tag_list>
+                        </div>
+                    </div>
+
+                    <!-- Popular Posts -->
+                    <div class="sidebar-box">
+                        <h3 class="sidebar-title">// POPULAR</h3>
+                        <ul class="popular-list">
+                            <s_rctps_rep>
+                            <li><a href="[##_rctps_rep_link_##]">→ [##_rctps_rep_title_##]</a></li>
+                            </s_rctps_rep>
+                        </ul>
+                    </div>
+
+                    <!-- Recent Comments -->
+                    <div class="sidebar-box">
+                        <h3 class="sidebar-title">// RECENT_COMMENTS</h3>
+                        <ul class="popular-list">
+                            <s_rct_notice>
+                            <li><a href="[##_notice_rep_link_##]">→ [##_notice_rep_title_##]</a></li>
+                            </s_rct_notice>
+                        </ul>
+                    </div>
+
+                    <!-- Tech Stack -->
+                    <div class="sidebar-box">
+                        <h3 class="sidebar-title">// TECH_STACK</h3>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Go</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">Redis</span>
+                            <span class="tech-badge">Kubernetes</span>
+                            <span class="tech-badge">Docker</span>
+                            <span class="tech-badge">gRPC</span>
+                        </div>
+                    </div>
+
+                    <!-- Activity Graph -->
+                    <div class="sidebar-box">
+                        <h3 class="sidebar-title">// ACTIVITY</h3>
+                        <div class="activity-graph">
+                            <div class="activity-row">
+                                <div class="activity-cell level-0"></div>
+                                <div class="activity-cell level-1"></div>
+                                <div class="activity-cell level-2"></div>
+                                <div class="activity-cell level-3"></div>
+                                <div class="activity-cell level-4"></div>
+                                <div class="activity-cell level-2"></div>
+                                <div class="activity-cell level-0"></div>
+                            </div>
+                            <div class="activity-row">
+                                <div class="activity-cell level-1"></div>
+                                <div class="activity-cell level-3"></div>
+                                <div class="activity-cell level-4"></div>
+                                <div class="activity-cell level-2"></div>
+                                <div class="activity-cell level-1"></div>
+                                <div class="activity-cell level-3"></div>
+                                <div class="activity-cell level-0"></div>
+                            </div>
+                            <div class="activity-row">
+                                <div class="activity-cell level-2"></div>
+                                <div class="activity-cell level-4"></div>
+                                <div class="activity-cell level-3"></div>
+                                <div class="activity-cell level-1"></div>
+                                <div class="activity-cell level-2"></div>
+                                <div class="activity-cell level-4"></div>
+                                <div class="activity-cell level-1"></div>
+                            </div>
+                        </div>
+                        <div class="activity-label">[##_count_total_##] POSTS TOTAL</div>
+                    </div>
+
+                    <!-- Subscribe -->
+                    <div class="sidebar-box newsletter-box">
+                        <h3 class="sidebar-title">// SUBSCRIBE</h3>
+                        <p class="newsletter-desc">새 글 알림 받기</p>
+                        <div class="subscribe-buttons">
+                            <a href="[##_rss_url_##]" class="subscribe-btn" target="_blank">
+                                <span>RSS</span>
+                            </a>
+                            <a href="javascript:;" onclick="window.open('[##_blog_link_##]/admin/center/','_blank')" class="subscribe-btn">
+                                <span>이웃추가</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Status -->
+                    <div class="sidebar-box status-box">
+                        <h3 class="sidebar-title">// STATUS</h3>
+                        <div class="status-item">
+                            <span class="status-dot active"></span>
+                            <span>SYSTEM_ONLINE</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot"></span>
+                            <span>TODAY: [##_count_today_##]</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot"></span>
+                            <span>TOTAL: [##_count_total_##]</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">© 2025 [##_title_##] // ALL_RIGHTS_RESERVED</div>
+                <div class="footer-links">
+                    <a href="[##_blog_link_##]">HOME</a>
+                    <a href="[##_blog_link_##]/archive">ARCHIVE</a>
+                    <a href="[##_rss_url_##]" target="_blank">RSS</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
