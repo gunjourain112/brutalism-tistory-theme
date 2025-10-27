@@ -52,14 +52,8 @@
                 <!-- Articles Section -->
                 <div class="articles">
 
-                    <!-- Index Page: Latest Articles -->
-                    <s_index_article_rep>
-                        <div class="section-header">
-                            <h2 class="section-title">LATEST_ARTICLES</h2>
-                            <div class="section-line"></div>
-                        </div>
-
-                        <s_article_rep>
+                    <!-- Article List -->
+                    <s_article_rep>
                             <article class="article-card">
                                 <div class="article-number">[##_article_rep_index_##]</div>
                                 <div class="article-content">
@@ -79,49 +73,10 @@
                                     </div>
                                 </div>
                             </article>
-                        </s_article_rep>
-
-                        <s_article_rep_empty>
-                            <div class="empty-state">
-                                <div class="empty-icon">📝</div>
-                                <h3 class="empty-title">NO_ARTICLES_YET</h3>
-                                <p class="empty-desc">// 첫 번째 글을 작성해보세요</p>
-                            </div>
-                        </s_article_rep_empty>
-
-                        <div class="view-all-section">
-                            <a href="[##_blog_link_##]archive" class="view-all-btn">
-                                <span>VIEW_ALL_ARTICLES</span>
-                                <span class="arrow">→</span>
-                            </a>
-                        </div>
-                    </s_index_article_rep>
-
-                    <!-- Fallback: Show articles on main page if s_index_article_rep doesn't work -->
-                    <s_article_rep>
-                        <article class="article-card">
-                            <div class="article-number">[##_article_rep_index_##]</div>
-                            <div class="article-content">
-                                <div class="article-meta">
-                                    <span class="article-date">[##_article_rep_date_##]</span>
-                                    <span class="article-tag">#[##_article_rep_category_##]</span>
-                                </div>
-                                <h3 class="article-title">
-                                    <a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a>
-                                </h3>
-                                <p class="article-excerpt">
-                                    [##_article_rep_summary_##]
-                                </p>
-                                <div class="article-footer">
-                                    <span class="read-time">READ MORE</span>
-                                    <a href="[##_article_rep_link_##]" class="read-more">→</a>
-                                </div>
-                            </div>
-                        </article>
                     </s_article_rep>
 
-                    <!-- Archive Page -->
-                    <s_archive>
+                    <!-- Article Detail -->
+                    <s_article_protected>
                         <div class="archive-header">
                             <h1 class="archive-title">ARCHIVE</h1>
                             <p class="archive-desc">// ALL_ARTICLES</p>
@@ -332,7 +287,7 @@
             }
         })();
     </script>
-    <script src="./images/script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
