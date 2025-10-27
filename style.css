@@ -1651,3 +1651,20 @@ body {
 .comments-section {
     margin-top: var(--spacing-xl);
 }
+
+/* Hide article-card on permalink pages */
+.tt-body-permalink .article-card {
+    display: none !important;
+}
+
+/* Hide article-detail on list pages */
+.tt-body-index .article-detail,
+.tt-body-category .article-detail,
+.tt-body-archive .article-detail {
+    display: none !important;
+}
+
+/* Show only article-detail on permalink */
+.tt-body-permalink .article-detail {
+    display: block !important;
+}

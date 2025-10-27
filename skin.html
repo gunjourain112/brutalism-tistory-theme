@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[##_page_title_##]</title>
-    <link rel="stylesheet" href="./style.css?v=20251028005">
+    <link rel="stylesheet" href="./style.css?v=20251028006">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -72,6 +72,39 @@
                                     <a href="[##_article_rep_link_##]" class="read-more">→</a>
                                 </div>
                             </div>
+                        </article>
+
+                        <!-- Article Detail (inside s_article_rep) -->
+                        <article class="article-detail">
+                            <header class="article-detail-header">
+                                <div class="article-meta-large">
+                                    <span class="article-date">[##_article_rep_date_##]</span>
+                                    <span class="article-tag">#[##_article_rep_category_##]</span>
+                                </div>
+                                <h1 class="article-detail-title">
+                                    [##_article_rep_title_##]
+                                </h1>
+                            </header>
+
+                            <div class="article-body">
+                                [##_article_rep_desc_##]
+                            </div>
+
+                            <footer class="article-detail-footer">
+                                <s_tag_list>
+                                <div class="tags-section">
+                                    <div class="tags-label">// TAGS</div>
+                                    <div class="tags-list">
+                                        <a href="[##_tag_link_##]" class="tag">[##_tag_name_##]</a>
+                                    </div>
+                                </div>
+                                </s_tag_list>
+
+                                <div class="comments-section">
+                                    <h3 class="sidebar-title">// COMMENTS</h3>
+                                    [##_article_rep_comment_##]
+                                </div>
+                            </footer>
                         </article>
                     </s_article_rep>
 
@@ -287,7 +320,7 @@
             }
         })();
     </script>
-    <script src="./images/script.js?v=20251028005"></script>
+    <script src="./images/script.js?v=20251028006"></script>
 </body>
 
 </html>

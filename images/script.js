@@ -289,3 +289,27 @@ if (filterBtns.length > 0) {
 }
 
 })(); // End of IIFE
+
+
+// Detect page type and add body class
+(function() {
+    const body = document.body;
+    const path = window.location.pathname;
+    
+    // Check if it's a permalink (article detail page)
+    if (window.T && window.T.entryInfo && window.T.entryInfo.entryId) {
+        body.classList.add('tt-body-permalink');
+    } 
+    // Check if it's archive
+    else if (path.includes('/archive')) {
+        body.classList.add('tt-body-archive');
+    }
+    // Check if it's category
+    else if (path.includes('/category/')) {
+        body.classList.add('tt-body-category');
+    }
+    // Default to index
+    else {
+        body.classList.add('tt-body-index');
+    }
+})();
