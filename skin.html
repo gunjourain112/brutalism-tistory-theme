@@ -13,9 +13,6 @@
     <meta property="og:title" content="[##_page_title_##]" />
     <meta property="og:url" content="[##_canonical_url_##]" />
     <meta property="og:description" content="[##_desc_##]" />
-    
-    <!-- jQuery for Tistory -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -30,7 +27,7 @@
                     </a>
                 </div>
                 <nav class="nav">
-                    <a href="[##_blog_link_##]" class="nav-link">/articles</a>
+                    <a href="[##_blog_link_##]" class="nav-link">/home</a>
                     <a href="[##_blog_link_##]archive" class="nav-link">/archive</a>
                     <a href="[##_blog_link_##]guestbook" class="nav-link">/guestbook</a>
                     <button class="theme-toggle" id="themeToggle">
@@ -44,61 +41,6 @@
         </div>
     </header>
 
-    <!-- Hero Section (Only on Main Page) -->
-    <s_index>
-    <section class="hero">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-main">
-                    <div class="hero-label">// [##_desc_##]</div>
-                    <h1 class="hero-title">
-                        PRODUCTION<br>
-                        <span class="highlight">SYSTEMS</span><br>
-                        AT SCALE
-                    </h1>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <div class="stat-value">[##_count_total_##]</div>
-                            <div class="stat-label">TOTAL POSTS</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">[##_count_today_##]</div>
-                            <div class="stat-label">TODAY</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">[##_count_total_##]</div>
-                            <div class="stat-label">VISITORS</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-side">
-                    <div class="terminal-box">
-                        <div class="terminal-header">
-                            <span class="terminal-dot"></span>
-                            <span class="terminal-dot"></span>
-                            <span class="terminal-dot"></span>
-                        </div>
-                        <div class="terminal-body">
-                            <div class="terminal-line">
-                                <span class="prompt">$</span> cat /about.txt
-                            </div>
-                            <div class="terminal-line">
-                                [##_desc_##]
-                            </div>
-                            <div class="terminal-line">
-                                실전 경험 · 성능 최적화
-                            </div>
-                            <div class="terminal-line">
-                                <span class="prompt">$</span> <span class="cursor">_</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    </s_index>
-
     <!-- Main Content -->
     <main class="main">
         <div class="container">
@@ -106,7 +48,7 @@
                 <!-- Articles Section -->
                 <div class="articles">
                     
-                    <!-- Index Page: Latest 3 Articles -->
+                    <!-- Index Page: Latest Articles -->
                     <s_index_article_rep>
                     <div class="section-header">
                         <h2 class="section-title">LATEST_ARTICLES</h2>
@@ -128,8 +70,8 @@
                                 [##_article_rep_summary_##]
                             </p>
                             <div class="article-footer">
-                                <span class="read-time">[##_article_rep_desc_##]</span>
-                                <a href="[##_article_rep_link_##]" class="read-more">READ_MORE →</a>
+                                <span class="read-time">READ MORE</span>
+                                <a href="[##_article_rep_link_##]" class="read-more">→</a>
                             </div>
                         </div>
                     </article>
@@ -143,22 +85,15 @@
                     </div>
                     </s_index_article_rep>
 
-                    <!-- Archive Page: All Articles by Year -->
+                    <!-- Archive Page -->
                     <s_archive>
                     <div class="archive-header">
                         <h1 class="archive-title">ARCHIVE</h1>
-                        <p class="archive-desc">// ALL_ARTICLES_BY_YEAR</p>
-                        
-                        <div class="archive-filters">
-                            <button class="filter-btn active" data-filter="all">ALL</button>
-                            <s_category_list>
-                            <button class="filter-btn" data-filter="[##_category_name_##]">[##_category_name_##]</button>
-                            </s_category_list>
-                        </div>
+                        <p class="archive-desc">// ALL_ARTICLES</p>
                     </div>
 
                     <s_article_rep>
-                    <article class="archive-item" data-category="[##_article_rep_category_##]">
+                    <article class="archive-item">
                         <div class="archive-date">[##_article_rep_date_##]</div>
                         <div class="archive-content">
                             <h3 class="archive-item-title">
@@ -166,7 +101,6 @@
                             </h3>
                             <div class="archive-meta">
                                 <span class="archive-tag">#[##_article_rep_category_##]</span>
-                                <span class="archive-read">[##_article_rep_desc_##]</span>
                             </div>
                         </div>
                     </article>
@@ -178,8 +112,7 @@
                     <div class="category-hero">
                         <div class="category-hero-content">
                             <h1 class="category-title">#[##_category_name_##]</h1>
-                            <p class="category-desc">// [##_category_description_##]</p>
-                            <div class="category-count">[[##_category_count_##] ARTICLES]</div>
+                            <p class="category-desc">// CATEGORY</p>
                         </div>
                     </div>
 
@@ -198,15 +131,15 @@
                                 [##_article_rep_summary_##]
                             </p>
                             <div class="article-footer">
-                                <span class="read-time">[##_article_rep_desc_##]</span>
-                                <a href="[##_article_rep_link_##]" class="read-more">READ_MORE →</a>
+                                <span class="read-time">READ MORE</span>
+                                <a href="[##_article_rep_link_##]" class="read-more">→</a>
                             </div>
                         </div>
                     </article>
                     </s_article_rep>
 
                     <div class="back-section">
-                        <a href="[##_blog_link_##]" class="back-btn">← BACK_TO_ALL_ARTICLES</a>
+                        <a href="[##_blog_link_##]" class="back-btn">← BACK</a>
                     </div>
                     </s_category>
 
@@ -218,7 +151,6 @@
                                 <div class="article-meta-large">
                                     <span class="article-date">[##_article_rep_date_##]</span>
                                     <span class="article-tag">#[##_article_rep_category_##]</span>
-                                    <span class="read-time">[##_article_rep_desc_##]</span>
                                 </div>
                                 <h1 class="article-detail-title">
                                     [##_article_rep_title_##]
@@ -231,14 +163,14 @@
 
                             <footer class="article-detail-footer">
                                 <!-- Tags -->
+                                <s_tag_list>
                                 <div class="tags-section">
                                     <div class="tags-label">// TAGS</div>
                                     <div class="tags-list">
-                                        <s_tag_list>
                                         <a href="[##_tag_link_##]" class="tag">[##_tag_name_##]</a>
-                                        </s_tag_list>
                                     </div>
                                 </div>
+                                </s_tag_list>
 
                                 <!-- Comments -->
                                 <div class="comments-section">
@@ -255,7 +187,7 @@
                     <div class="container-narrow">
                         <div class="archive-header">
                             <h1 class="archive-title">GUESTBOOK</h1>
-                            <p class="archive-desc">// LEAVE_YOUR_MESSAGE</p>
+                            <p class="archive-desc">// LEAVE_MESSAGE</p>
                         </div>
                         <div class="guestbook-content">
                             [##_guest_rep_desc_##]
@@ -308,74 +240,13 @@
                         </ul>
                     </div>
 
-                    <!-- Recent Comments -->
-                    <div class="sidebar-box">
-                        <h3 class="sidebar-title">// RECENT_COMMENTS</h3>
-                        <ul class="popular-list">
-                            <s_rct_notice>
-                            <li><a href="[##_notice_rep_link_##]">→ [##_notice_rep_title_##]</a></li>
-                            </s_rct_notice>
-                        </ul>
-                    </div>
-
-                    <!-- Tech Stack -->
-                    <div class="sidebar-box">
-                        <h3 class="sidebar-title">// TECH_STACK</h3>
-                        <div class="tech-stack">
-                            <span class="tech-badge">Go</span>
-                            <span class="tech-badge">PostgreSQL</span>
-                            <span class="tech-badge">Redis</span>
-                            <span class="tech-badge">Kubernetes</span>
-                            <span class="tech-badge">Docker</span>
-                            <span class="tech-badge">gRPC</span>
-                        </div>
-                    </div>
-
-                    <!-- Activity Graph -->
-                    <div class="sidebar-box">
-                        <h3 class="sidebar-title">// ACTIVITY</h3>
-                        <div class="activity-graph">
-                            <div class="activity-row">
-                                <div class="activity-cell level-0"></div>
-                                <div class="activity-cell level-1"></div>
-                                <div class="activity-cell level-2"></div>
-                                <div class="activity-cell level-3"></div>
-                                <div class="activity-cell level-4"></div>
-                                <div class="activity-cell level-2"></div>
-                                <div class="activity-cell level-0"></div>
-                            </div>
-                            <div class="activity-row">
-                                <div class="activity-cell level-1"></div>
-                                <div class="activity-cell level-3"></div>
-                                <div class="activity-cell level-4"></div>
-                                <div class="activity-cell level-2"></div>
-                                <div class="activity-cell level-1"></div>
-                                <div class="activity-cell level-3"></div>
-                                <div class="activity-cell level-0"></div>
-                            </div>
-                            <div class="activity-row">
-                                <div class="activity-cell level-2"></div>
-                                <div class="activity-cell level-4"></div>
-                                <div class="activity-cell level-3"></div>
-                                <div class="activity-cell level-1"></div>
-                                <div class="activity-cell level-2"></div>
-                                <div class="activity-cell level-4"></div>
-                                <div class="activity-cell level-1"></div>
-                            </div>
-                        </div>
-                        <div class="activity-label">[##_count_total_##] POSTS TOTAL</div>
-                    </div>
-
                     <!-- Subscribe -->
                     <div class="sidebar-box newsletter-box">
                         <h3 class="sidebar-title">// SUBSCRIBE</h3>
-                        <p class="newsletter-desc">새 글 알림 받기</p>
+                        <p class="newsletter-desc">새 글 알림</p>
                         <div class="subscribe-buttons">
                             <a href="[##_rss_url_##]" class="subscribe-btn" target="_blank">
                                 <span>RSS</span>
-                            </a>
-                            <a href="[##_blog_link_##]admin/center/" class="subscribe-btn" target="_blank">
-                                <span>이웃추가</span>
                             </a>
                         </div>
                     </div>
@@ -385,7 +256,7 @@
                         <h3 class="sidebar-title">// STATUS</h3>
                         <div class="status-item">
                             <span class="status-dot active"></span>
-                            <span>SYSTEM_ONLINE</span>
+                            <span>ONLINE</span>
                         </div>
                         <div class="status-item">
                             <span class="status-dot"></span>
@@ -405,7 +276,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-text">© 2025 [##_title_##] // ALL_RIGHTS_RESERVED</div>
+                <div class="footer-text">© 2025 [##_title_##]</div>
                 <div class="footer-links">
                     <a href="[##_blog_link_##]">HOME</a>
                     <a href="[##_blog_link_##]archive">ARCHIVE</a>
