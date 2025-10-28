@@ -950,90 +950,90 @@ body {
     color: #cc0066;
 }
 
-/* Brutalism Dark - Syntax Highlighting */
-/* Comments - Gray */
+/* Prisma Dark - Syntax Highlighting */
+/* Comments - Darker Gray */
 [data-theme="dark"] .token.comment,
 [data-theme="dark"] .token.prolog,
 [data-theme="dark"] .token.doctype,
 [data-theme="dark"] .token.cdata {
-    color: #888888;
+    color: #6b7278;
     font-style: italic;
 }
 
-/* Keywords - Bold Pink */
+/* Keywords - Bold Cyan */
 [data-theme="dark"] .token.keyword,
 [data-theme="dark"] .token.control,
 [data-theme="dark"] .token.directive,
 [data-theme="dark"] .token.unit,
 [data-theme="dark"] .token.storage,
 [data-theme="dark"] .token.important {
-    color: #ff6b9d;
+    color: #93d7f1;
     font-weight: 700;
 }
 
-/* Functions - Bold Cyan */
+/* Functions - Yellow */
 [data-theme="dark"] .token.function,
 [data-theme="dark"] .token.method,
 [data-theme="dark"] .token.function-name {
-    color: #6bddff;
+    color: #ffda98;
     font-weight: 600;
 }
 
-/* Strings - Light Green */
+/* Strings - Peach */
 [data-theme="dark"] .token.string,
 [data-theme="dark"] .token.attr-value,
 [data-theme="dark"] .token.template-string,
 [data-theme="dark"] .token.char {
-    color: #a3e88c;
+    color: #ffc093;
 }
 
-/* Numbers & Booleans - Light Purple */
+/* Numbers & Booleans - Yellow Green */
 [data-theme="dark"] .token.number,
 [data-theme="dark"] .token.boolean,
 [data-theme="dark"] .token.constant {
-    color: #d4a3ff;
+    color: #D4CE41;
 }
 
-/* Types & Classes - Bold Orange */
+/* Types & Classes - White */
 [data-theme="dark"] .token.class-name,
 [data-theme="dark"] .token.type-name,
 [data-theme="dark"] .token.builtin,
 [data-theme="dark"] .token.namespace {
-    color: #ffb366;
+    color: #f7f7f7;
     font-weight: 600;
 }
 
-/* Tags - Bold Teal */
+/* Tags - White */
 [data-theme="dark"] .token.tag,
 [data-theme="dark"] .token.selector {
-    color: #66d9d9;
+    color: #f7f7f7;
     font-weight: 700;
 }
 
-/* Attributes - Cyan */
+/* Attributes - Peach */
 [data-theme="dark"] .token.attr-name,
 [data-theme="dark"] .token.property {
-    color: #6bddff;
+    color: #ffc093;
 }
 
-/* Variables - Light Gray */
+/* Variables - White */
 [data-theme="dark"] .token.variable,
 [data-theme="dark"] .token.parameter {
-    color: #e0e0e0;
+    color: #f7f7f7;
 }
 
-/* Operators & Punctuation - Gray */
+/* Operators & Punctuation - Light Gray */
 [data-theme="dark"] .token.operator,
 [data-theme="dark"] .token.entity,
 [data-theme="dark"] .token.url,
 [data-theme="dark"] .token.punctuation,
 [data-theme="dark"] .token.delimiter {
-    color: #b0b0b0;
+    color: #f7f7f7b3;
 }
 
-/* Regex - Light Magenta */
+/* Regex - Yellow */
 [data-theme="dark"] .token.regex {
-    color: #ff66cc;
+    color: #ffda98;
 }
 
 /* Table */
