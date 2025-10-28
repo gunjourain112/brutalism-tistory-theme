@@ -714,7 +714,7 @@ body {
     padding: var(--spacing-md);
     margin: var(--spacing-lg) 0;
     background-color: var(--bg-secondary);
-    color: var(--bg-primary);
+    color: var(--text-primary);
 }
 
 .callout-icon {
@@ -993,7 +993,7 @@ body {
 
 .brutal-table th {
     background-color: var(--bg-secondary);
-    color: var(--bg-primary);
+    color: var(--text-primary);
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -1096,6 +1096,7 @@ body {
     border: 2px solid var(--border);
     padding: var(--spacing-sm) var(--spacing-md);
     cursor: pointer;
+    color: var(--text-primary);
     transition: all 0.2s ease;
 }
 

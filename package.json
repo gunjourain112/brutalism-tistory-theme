@@ -1,0 +1,16 @@
+{
+  "name": "brutalism-tistory-theme",
+  "version": "1.0.0",
+  "description": "Brutalism style Tistory theme with dark/light mode",
+  "main": "local/server.js",
+  "scripts": {
+    "start": "node local/server.js",
+    "dev": "node local/server.js"
+  },
+  "keywords": ["tistory", "theme", "brutalism", "blog"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
