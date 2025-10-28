@@ -202,6 +202,22 @@ if (articleDetail) {
     });
 }
 
+// Syntax Highlighting with Prism
+document.querySelectorAll('.code-block').forEach(block => {
+    const langElement = block.querySelector('.code-lang');
+    const codeElement = block.querySelector('code');
+    
+    if (langElement && codeElement) {
+        const lang = langElement.textContent.toLowerCase();
+        codeElement.classList.add(`language-${lang}`);
+    }
+});
+
+// Initialize Prism if available
+if (typeof Prism !== 'undefined') {
+    Prism.highlightAll();
+}
+
 // Code Copy Buttons
 document.querySelectorAll('.code-copy').forEach(button => {
     button.addEventListener('click', async function() {
