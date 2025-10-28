@@ -338,6 +338,7 @@ body {
     gap: var(--spacing-2xl);
 }
 
+/* Article Card (for list pages) */
 .article-card {
     display: grid;
     grid-template-columns: 80px 1fr;
