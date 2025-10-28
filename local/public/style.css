@@ -1964,22 +1964,29 @@ mpty State ===== */
 }
 
 /* ===== Tistory Category Widget Override ===== */
-/* Override Tistory's default .another_category styles */
-.another_category,
-div.another_category,
-.another_category_color_gray,
-.another_category_color_red,
-.another_category_color_green,
-.another_category_color_blue,
-.another_category_color_violet {
+/* Override Tistory's default .another_category styles with higher specificity */
+body .another_category,
+body div.another_category,
+body .another_category_color_gray,
+body .another_category_color_red,
+body .another_category_color_green,
+body .another_category_color_blue,
+body .another_category_color_violet,
+.article-detail .another_category,
+.article-body .another_category {
     border: 3px solid var(--border) !important;
     padding: var(--spacing-lg) !important;
     margin: var(--spacing-xl) 0 !important;
     background-color: var(--bg-secondary) !important;
-    clear: both;
+    clear: both !important;
 }
 
-.another_category h4 {
+body .another_category h4,
+body .another_category_color_gray h4,
+body .another_category_color_red h4,
+body .another_category_color_green h4,
+body .another_category_color_blue h4,
+body .another_category_color_violet h4 {
     font-family: var(--font-mono) !important;
     font-size: 0.875rem !important;
     font-weight: 700 !important;
@@ -1990,7 +1997,12 @@ div.another_category,
     text-transform: uppercase !important;
 }
 
-.another_category h4 a {
+body .another_category h4 a,
+body .another_category_color_gray h4 a,
+body .another_category_color_red h4 a,
+body .another_category_color_green h4 a,
+body .another_category_color_blue h4 a,
+body .another_category_color_violet h4 a {
     color: var(--accent) !important;
     font-weight: 700 !important;
     text-decoration: none !important;
@@ -2031,7 +2043,12 @@ div.another_category,
     color: var(--text-secondary) !important;
 }
 
-.another_category th a {
+body .another_category th a,
+body .another_category_color_gray th a,
+body .another_category_color_red th a,
+body .another_category_color_green th a,
+body .another_category_color_blue th a,
+body .another_category_color_violet th a {
     color: var(--text-primary) !important;
     font-weight: 400 !important;
     text-decoration: none !important;
@@ -2125,4 +2142,16 @@ div.another_category,
 .another_category_color_blue th span,
 .another_category_color_violet th span {
     color: var(--text-secondary) !important;
+}
+
+/* Hide the "N" (new) icon - doesn't fit our brutalism design */
+body .another_category img,
+body .another_category_color_gray img,
+body .another_category_color_red img,
+body .another_category_color_green img,
+body .another_category_color_blue img,
+body .another_category_color_violet img,
+.another_category img[alt="N"] {
+    display: none !important;
+    visibility: hidden !important;
 }

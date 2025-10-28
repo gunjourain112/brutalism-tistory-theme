@@ -1591,170 +1591,6 @@ body {
     }
 }
 
-/* ===== Tistory Category Widget Override ===== */
-/* Override Tistory's default .another_category styles */
-.another_category,
-div.another_category,
-.another_category_color_gray,
-.another_category_color_red,
-.another_category_color_green,
-.another_category_color_blue,
-.another_category_color_violet {
-    border: 3px solid var(--border) !important;
-    padding: var(--spacing-lg) !important;
-    margin: var(--spacing-xl) 0 !important;
-    background-color: var(--bg-secondary) !important;
-    clear: both;
-}
-
-.another_category h4 {
-    font-family: var(--font-mono) !important;
-    font-size: 0.875rem !important;
-    font-weight: 700 !important;
-    margin: 0 0 var(--spacing-md) 0 !important;
-    padding: 0 0 var(--spacing-sm) 0 !important;
-    border-bottom: 3px solid var(--border) !important;
-    color: var(--text-primary) !important;
-    text-transform: uppercase !important;
-}
-
-.another_category h4 a {
-    color: var(--accent) !important;
-    font-weight: 700 !important;
-    text-decoration: none !important;
-}
-
-.another_category h4 a:hover {
-    color: var(--accent-2) !important;
-}
-
-.another_category table {
-    table-layout: fixed;
-    border-collapse: collapse;
-    width: 100% !important;
-    margin-top: var(--spacing-md) !important;
-}
-
-.another_category th,
-.another_category td {
-    padding: var(--spacing-sm) 0 !important;
-    border: none !important;
-}
-
-.another_category th {
-    text-align: left;
-    font-family: var(--font-mono) !important;
-    font-size: 0.875rem !important;
-    font-weight: 400 !important;
-    word-break: break-all;
-    overflow: hidden;
-    line-height: 1.5;
-}
-
-.another_category td {
-    text-align: right;
-    width: 100px;
-    font-family: var(--font-mono) !important;
-    font-size: 0.75rem !important;
-    color: var(--text-secondary) !important;
-}
-
-.another_category th a {
-    color: var(--text-primary) !important;
-    font-weight: 400 !important;
-    text-decoration: none !important;
-    border: none !important;
-    transition: color 0.2s ease;
-}
-
-.another_category th a:hover {
-    color: var(--accent) !important;
-}
-
-.another_category th a.current {
-    color: var(--accent) !important;
-    font-weight: 700 !important;
-    text-decoration: none !important;
-    border-bottom: 2px solid var(--accent) !important;
-}
-
-.another_category th span {
-    font-family: var(--font-mono) !important;
-    font-size: 0.75rem !important;
-    color: var(--text-secondary) !important;
-    font-weight: 400 !important;
-    text-decoration: none;
-    border: none !important;
-}
-
-/* Override all color variants */
-.another_category_color_gray,
-.another_category_color_gray h4,
-.another_category_color_red,
-.another_category_color_red h4,
-.another_category_color_green,
-.another_category_color_green h4,
-.another_category_color_blue,
-.another_category_color_blue h4,
-.another_category_color_violet,
-.another_category_color_violet h4 {
-    border-color: var(--border) !important;
-}
-
-.another_category_color_gray *,
-.another_category_color_red *,
-.another_category_color_green *,
-.another_category_color_blue *,
-.another_category_color_violet * {
-    color: var(--text-primary) !important;
-}
-
-.another_category_color_gray h4,
-.another_category_color_gray h4 a,
-.another_category_color_red h4,
-.another_category_color_red h4 a,
-.another_category_color_green h4,
-.another_category_color_green h4 a,
-.another_category_color_blue h4,
-.another_category_color_blue h4 a,
-.another_category_color_violet h4,
-.another_category_color_violet h4 a {
-    color: var(--text-primary) !important;
-}
-
-.another_category_color_gray h4 a,
-.another_category_color_red h4 a,
-.another_category_color_green h4 a,
-.another_category_color_blue h4 a,
-.another_category_color_violet h4 a {
-    color: var(--accent) !important;
-}
-
-.another_category_color_gray th a.current,
-.another_category_color_red th a.current,
-.another_category_color_green th a.current,
-.another_category_color_blue th a.current,
-.another_category_color_violet th a.current {
-    border-color: var(--accent) !important;
-    color: var(--accent) !important;
-}
-
-.another_category_color_gray td,
-.another_category_color_red td,
-.another_category_color_green td,
-.another_category_color_blue td,
-.another_category_color_violet td {
-    color: var(--text-secondary) !important;
-}
-
-.another_category_color_gray th span,
-.another_category_color_red th span,
-.another_category_color_green th span,
-.another_category_color_blue th span,
-.another_category_color_violet th span {
-    color: var(--text-secondary) !important;
-}
-
 /* ===== View All Button ===== */
 .view-all-section {
     margin-top: var(--spacing-xl);
@@ -1972,8 +1808,8 @@ div.another_category,
 .archive-item.hidden {
     display: none;
 }
-/* =====
- Empty State ===== */
+/* ===== E
+mpty State ===== */
 .empty-state {
     text-align: center;
     padding: var(--spacing-2xl) var(--spacing-md);
@@ -2127,19 +1963,195 @@ div.another_category,
     margin-top: var(--spacing-xl);
 }
 
-/* Hide article-card on permalink pages */
-.tt-body-permalink .article-card {
-    display: none !important;
+/* ===== Tistory Category Widget Override ===== */
+/* Override Tistory's default .another_category styles with higher specificity */
+body .another_category,
+body div.another_category,
+body .another_category_color_gray,
+body .another_category_color_red,
+body .another_category_color_green,
+body .another_category_color_blue,
+body .another_category_color_violet,
+.article-detail .another_category,
+.article-body .another_category {
+    border: 3px solid var(--border) !important;
+    padding: var(--spacing-lg) !important;
+    margin: var(--spacing-xl) 0 !important;
+    background-color: var(--bg-secondary) !important;
+    clear: both !important;
 }
 
-/* Hide article-detail on list pages */
-.tt-body-index .article-detail,
-.tt-body-category .article-detail,
-.tt-body-archive .article-detail {
-    display: none !important;
+body .another_category h4,
+body .another_category_color_gray h4,
+body .another_category_color_red h4,
+body .another_category_color_green h4,
+body .another_category_color_blue h4,
+body .another_category_color_violet h4 {
+    font-family: var(--font-mono) !important;
+    font-size: 0.875rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 var(--spacing-md) 0 !important;
+    padding: 0 0 var(--spacing-sm) 0 !important;
+    border-bottom: 3px solid var(--border) !important;
+    color: var(--text-primary) !important;
+    text-transform: uppercase !important;
 }
 
-/* Show only article-detail on permalink */
-.tt-body-permalink .article-detail {
-    display: block !important;
+body .another_category h4 a,
+body .another_category_color_gray h4 a,
+body .another_category_color_red h4 a,
+body .another_category_color_green h4 a,
+body .another_category_color_blue h4 a,
+body .another_category_color_violet h4 a {
+    color: var(--accent) !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+}
+
+.another_category h4 a:hover {
+    color: var(--accent-2) !important;
+}
+
+.another_category table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100% !important;
+    margin-top: var(--spacing-md) !important;
+}
+
+.another_category th,
+.another_category td {
+    padding: var(--spacing-sm) 0 !important;
+    border: none !important;
+}
+
+.another_category th {
+    text-align: left;
+    font-family: var(--font-mono) !important;
+    font-size: 0.875rem !important;
+    font-weight: 400 !important;
+    word-break: break-all;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+.another_category td {
+    text-align: right;
+    width: 100px;
+    font-family: var(--font-mono) !important;
+    font-size: 0.75rem !important;
+    color: var(--text-secondary) !important;
+}
+
+body .another_category th a,
+body .another_category_color_gray th a,
+body .another_category_color_red th a,
+body .another_category_color_green th a,
+body .another_category_color_blue th a,
+body .another_category_color_violet th a {
+    color: var(--text-primary) !important;
+    font-weight: 400 !important;
+    text-decoration: none !important;
+    border: none !important;
+    transition: color 0.2s ease;
+}
+
+.another_category th a:hover {
+    color: var(--accent) !important;
+}
+
+.another_category th a.current {
+    color: var(--accent) !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    border-bottom: 2px solid var(--accent) !important;
+}
+
+.another_category th span {
+    font-family: var(--font-mono) !important;
+    font-size: 0.75rem !important;
+    color: var(--text-secondary) !important;
+    font-weight: 400 !important;
+    text-decoration: none;
+    border: none !important;
+}
+
+/* Override all color variants */
+.another_category_color_gray,
+.another_category_color_gray h4,
+.another_category_color_red,
+.another_category_color_red h4,
+.another_category_color_green,
+.another_category_color_green h4,
+.another_category_color_blue,
+.another_category_color_blue h4,
+.another_category_color_violet,
+.another_category_color_violet h4 {
+    border-color: var(--border) !important;
+}
+
+.another_category_color_gray *,
+.another_category_color_red *,
+.another_category_color_green *,
+.another_category_color_blue *,
+.another_category_color_violet * {
+    color: var(--text-primary) !important;
+}
+
+.another_category_color_gray h4,
+.another_category_color_gray h4 a,
+.another_category_color_red h4,
+.another_category_color_red h4 a,
+.another_category_color_green h4,
+.another_category_color_green h4 a,
+.another_category_color_blue h4,
+.another_category_color_blue h4 a,
+.another_category_color_violet h4,
+.another_category_color_violet h4 a {
+    color: var(--text-primary) !important;
+}
+
+.another_category_color_gray h4 a,
+.another_category_color_red h4 a,
+.another_category_color_green h4 a,
+.another_category_color_blue h4 a,
+.another_category_color_violet h4 a {
+    color: var(--accent) !important;
+}
+
+.another_category_color_gray th a.current,
+.another_category_color_red th a.current,
+.another_category_color_green th a.current,
+.another_category_color_blue th a.current,
+.another_category_color_violet th a.current {
+    border-color: var(--accent) !important;
+    color: var(--accent) !important;
+}
+
+.another_category_color_gray td,
+.another_category_color_red td,
+.another_category_color_green td,
+.another_category_color_blue td,
+.another_category_color_violet td {
+    color: var(--text-secondary) !important;
+}
+
+.another_category_color_gray th span,
+.another_category_color_red th span,
+.another_category_color_green th span,
+.another_category_color_blue th span,
+.another_category_color_violet th span {
+    color: var(--text-secondary) !important;
+}
+
+/* Hide the "N" (new) icon - doesn't fit our brutalism design */
+body .another_category img,
+body .another_category_color_gray img,
+body .another_category_color_red img,
+body .another_category_color_green img,
+body .another_category_color_blue img,
+body .another_category_color_violet img,
+.another_category img[alt="N"] {
+    display: none !important;
+    visibility: hidden !important;
 }
