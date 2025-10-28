@@ -495,26 +495,80 @@ body {
     list-style: none;
 }
 
-.category-list li {
+/* Remove default Tistory category styles */
+.tt_category,
+.category_list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.tt_category > li {
     margin-bottom: var(--spacing-sm);
 }
 
-.category-list a {
+/* Nested category items - reduce spacing */
+.category_list {
+    margin-top: 0.5rem !important;
+    padding-left: 0 !important;
+}
+
+.category_list > li {
+    margin-bottom: 0.5rem !important;
+}
+
+/* Category links - brutalism style with arrow */
+.category-list a,
+.tt_category a,
+.category_list a {
     font-family: var(--font-mono);
     font-size: 0.875rem;
     color: var(--text-primary);
     text-decoration: none;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     transition: color 0.2s ease;
+    position: relative;
 }
 
-.category-list a:hover {
+/* Push count to the right */
+.link_tit,
+.link_item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.link_tit .c_cnt,
+.link_item .c_cnt {
+    margin-left: auto;
+}
+
+/* Add arrow before link */
+.link_tit::before {
+    content: '○';
+    margin-right: 0.5rem;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.link_item::before {
+    content: '■';
+    margin-right: 0.5rem;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.category-list a:hover,
+.tt_category a:hover,
+.category_list a:hover {
     color: var(--accent);
 }
 
-.category-list span {
+.category-list span,
+.c_cnt {
     color: var(--text-secondary);
+    margin-left: 0.5rem;
 }
 
 /* Tags */
@@ -2144,14 +2198,26 @@ body .another_category_color_violet th a {
     color: var(--text-secondary) !important;
 }
 
-/* Hide the "N" (new) icon - doesn't fit our brutalism design */
-body .another_category img,
-body .another_category_color_gray img,
-body .another_category_color_red img,
-body .another_category_color_green img,
-body .another_category_color_blue img,
-body .another_category_color_violet img,
-.another_category img[alt="N"] {
+/* Hide the "N" (new) icon and replace with [NEW] text */
+.category-list img[alt="N"],
+.tt_category img[alt="N"],
+.category_list img[alt="N"],
+.link_tit img,
+.link_item img {
     display: none !important;
-    visibility: hidden !important;
+}
+
+/* Add [N] badge for new categories */
+.link_tit:has(img[alt="N"])::after,
+.link_item:has(img[alt="N"])::after {
+    content: '[N]';
+    margin-left: 0.375rem;
+    font-size: 0.625rem;
+    font-weight: 700;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    padding: 0.125rem 0.25rem;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
 }
