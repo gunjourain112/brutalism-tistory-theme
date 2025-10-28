@@ -1962,3 +1962,167 @@ mpty State ===== */
 .comments-section {
     margin-top: var(--spacing-xl);
 }
+
+/* ===== Tistory Category Widget Override ===== */
+/* Override Tistory's default .another_category styles */
+.another_category,
+div.another_category,
+.another_category_color_gray,
+.another_category_color_red,
+.another_category_color_green,
+.another_category_color_blue,
+.another_category_color_violet {
+    border: 3px solid var(--border) !important;
+    padding: var(--spacing-lg) !important;
+    margin: var(--spacing-xl) 0 !important;
+    background-color: var(--bg-secondary) !important;
+    clear: both;
+}
+
+.another_category h4 {
+    font-family: var(--font-mono) !important;
+    font-size: 0.875rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 var(--spacing-md) 0 !important;
+    padding: 0 0 var(--spacing-sm) 0 !important;
+    border-bottom: 3px solid var(--border) !important;
+    color: var(--text-primary) !important;
+    text-transform: uppercase !important;
+}
+
+.another_category h4 a {
+    color: var(--accent) !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+}
+
+.another_category h4 a:hover {
+    color: var(--accent-2) !important;
+}
+
+.another_category table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100% !important;
+    margin-top: var(--spacing-md) !important;
+}
+
+.another_category th,
+.another_category td {
+    padding: var(--spacing-sm) 0 !important;
+    border: none !important;
+}
+
+.another_category th {
+    text-align: left;
+    font-family: var(--font-mono) !important;
+    font-size: 0.875rem !important;
+    font-weight: 400 !important;
+    word-break: break-all;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+.another_category td {
+    text-align: right;
+    width: 100px;
+    font-family: var(--font-mono) !important;
+    font-size: 0.75rem !important;
+    color: var(--text-secondary) !important;
+}
+
+.another_category th a {
+    color: var(--text-primary) !important;
+    font-weight: 400 !important;
+    text-decoration: none !important;
+    border: none !important;
+    transition: color 0.2s ease;
+}
+
+.another_category th a:hover {
+    color: var(--accent) !important;
+}
+
+.another_category th a.current {
+    color: var(--accent) !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    border-bottom: 2px solid var(--accent) !important;
+}
+
+.another_category th span {
+    font-family: var(--font-mono) !important;
+    font-size: 0.75rem !important;
+    color: var(--text-secondary) !important;
+    font-weight: 400 !important;
+    text-decoration: none;
+    border: none !important;
+}
+
+/* Override all color variants */
+.another_category_color_gray,
+.another_category_color_gray h4,
+.another_category_color_red,
+.another_category_color_red h4,
+.another_category_color_green,
+.another_category_color_green h4,
+.another_category_color_blue,
+.another_category_color_blue h4,
+.another_category_color_violet,
+.another_category_color_violet h4 {
+    border-color: var(--border) !important;
+}
+
+.another_category_color_gray *,
+.another_category_color_red *,
+.another_category_color_green *,
+.another_category_color_blue *,
+.another_category_color_violet * {
+    color: var(--text-primary) !important;
+}
+
+.another_category_color_gray h4,
+.another_category_color_gray h4 a,
+.another_category_color_red h4,
+.another_category_color_red h4 a,
+.another_category_color_green h4,
+.another_category_color_green h4 a,
+.another_category_color_blue h4,
+.another_category_color_blue h4 a,
+.another_category_color_violet h4,
+.another_category_color_violet h4 a {
+    color: var(--text-primary) !important;
+}
+
+.another_category_color_gray h4 a,
+.another_category_color_red h4 a,
+.another_category_color_green h4 a,
+.another_category_color_blue h4 a,
+.another_category_color_violet h4 a {
+    color: var(--accent) !important;
+}
+
+.another_category_color_gray th a.current,
+.another_category_color_red th a.current,
+.another_category_color_green th a.current,
+.another_category_color_blue th a.current,
+.another_category_color_violet th a.current {
+    border-color: var(--accent) !important;
+    color: var(--accent) !important;
+}
+
+.another_category_color_gray td,
+.another_category_color_red td,
+.another_category_color_green td,
+.another_category_color_blue td,
+.another_category_color_violet td {
+    color: var(--text-secondary) !important;
+}
+
+.another_category_color_gray th span,
+.another_category_color_red th span,
+.another_category_color_green th span,
+.another_category_color_blue th span,
+.another_category_color_violet th span {
+    color: var(--text-secondary) !important;
+}
