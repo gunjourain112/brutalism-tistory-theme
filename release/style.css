@@ -1037,6 +1037,48 @@ body {
     color: #ffda98;
 }
 
+/* Override Tistory's highlight.js styles */
+[data-theme="dark"] pre code,
+[data-theme="dark"] .hljs {
+    color: #e0e0e0 !important;
+    background: #1a1a1a !important;
+}
+
+/* Keep our token colors */
+[data-theme="dark"] pre code .hljs-keyword,
+[data-theme="dark"] .hljs-keyword {
+    color: #93d7f1 !important;
+}
+
+[data-theme="dark"] pre code .hljs-function,
+[data-theme="dark"] pre code .hljs-title,
+[data-theme="dark"] .hljs-function,
+[data-theme="dark"] .hljs-title {
+    color: #ffda98 !important;
+}
+
+[data-theme="dark"] pre code .hljs-string,
+[data-theme="dark"] .hljs-string {
+    color: #ffc093 !important;
+}
+
+[data-theme="dark"] pre code .hljs-number,
+[data-theme="dark"] .hljs-number {
+    color: #D4CE41 !important;
+}
+
+[data-theme="dark"] pre code .hljs-type,
+[data-theme="dark"] pre code .hljs-built_in,
+[data-theme="dark"] .hljs-type,
+[data-theme="dark"] .hljs-built_in {
+    color: #93d7f1 !important;
+}
+
+[data-theme="dark"] pre code .hljs-comment,
+[data-theme="dark"] .hljs-comment {
+    color: #6b7278 !important;
+}
+
 /* Table */
 .table-wrapper {
     overflow-x: auto;
