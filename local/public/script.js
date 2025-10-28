@@ -202,7 +202,7 @@ if (articleDetail) {
     });
 }
 
-// Syntax highlighting with Prism (tokenization only, styling from custom CSS)
+// Syntax highlighting with Prism
 document.querySelectorAll('.code-block').forEach(block => {
     const langElement = block.querySelector('.code-lang');
     const codeElement = block.querySelector('code');

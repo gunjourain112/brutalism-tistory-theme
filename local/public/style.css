@@ -829,6 +829,25 @@ body {
     color: #f7f7f7b3;
 }
 
+/* Force remove all token backgrounds and marks */
+.code-block .token,
+.code-block .token *,
+.code-block span[style*="background"] {
+    background: none !important;
+    background-color: transparent !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+}
+
+[data-theme="dark"] .code-block .token,
+[data-theme="dark"] .code-block .token *,
+[data-theme="dark"] .code-block span[style*="background"] {
+    background: none !important;
+    background-color: transparent !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+}
+
 /* Brutalism Light - Syntax Highlighting */
 /* Comments - Gray */
 .token.comment,
