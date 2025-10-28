@@ -829,21 +829,37 @@ body {
     color: #f7f7f7b3;
 }
 
-/* Force remove all token backgrounds and marks */
+/* Force remove ALL backgrounds from code elements */
+.code-block *,
+.code-block code,
+.code-block code *,
+.code-block pre,
+.code-block pre *,
 .code-block .token,
 .code-block .token *,
-.code-block span[style*="background"] {
+.code-block span,
+.code-block [style*="background"],
+.code-block [class*="line"] {
     background: none !important;
     background-color: transparent !important;
+    background-image: none !important;
     text-shadow: none !important;
     box-shadow: none !important;
 }
 
+[data-theme="dark"] .code-block *,
+[data-theme="dark"] .code-block code,
+[data-theme="dark"] .code-block code *,
+[data-theme="dark"] .code-block pre,
+[data-theme="dark"] .code-block pre *,
 [data-theme="dark"] .code-block .token,
 [data-theme="dark"] .code-block .token *,
-[data-theme="dark"] .code-block span[style*="background"] {
+[data-theme="dark"] .code-block span,
+[data-theme="dark"] .code-block [style*="background"],
+[data-theme="dark"] .code-block [class*="line"] {
     background: none !important;
     background-color: transparent !important;
+    background-image: none !important;
     text-shadow: none !important;
     box-shadow: none !important;
 }
