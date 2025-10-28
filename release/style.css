@@ -744,11 +744,11 @@ body {
 .code-block {
     border: 3px solid var(--border);
     margin: var(--spacing-lg) 0;
-    background-color: #f6f8fa;
+    background-color: #ffffff;
 }
 
 [data-theme="dark"] .code-block {
-    background-color: #1d1d1d;
+    background-color: #1a1a1a;
 }
 
 .code-header {
@@ -757,7 +757,11 @@ body {
     align-items: center;
     padding: var(--spacing-sm) var(--spacing-md);
     border-bottom: 3px solid var(--border);
-    background-color: var(--bg-primary);
+    background-color: #ffffff;
+}
+
+[data-theme="dark"] .code-header {
+    background-color: #1a1a1a;
 }
 
 .code-lang {
@@ -919,6 +923,7 @@ body {
 [data-theme="dark"] .token.method,
 [data-theme="dark"] .token.function-name {
     color: #ffda98;
+    background: none !important;
 }
 
 [data-theme="dark"] .token.string,
@@ -1796,8 +1801,8 @@ body {
     border-color: #444444;
 }
 
-/* Code block */
-.article-body pre {
+/* Code block - standalone pre (not inside .code-block) */
+.article-body pre:not(.code-block pre) {
     background-color: #f6f8fa;
     border: 3px solid #d0d7de;
     padding: var(--spacing-md);
@@ -1805,9 +1810,15 @@ body {
     margin: var(--spacing-md) 0;
 }
 
-[data-theme="dark"] .article-body pre {
+[data-theme="dark"] .article-body pre:not(.code-block pre) {
     background-color: #1d1d1d;
-    border-color: #444444;
+    border-color: var(--border);
+}
+
+/* Remove border from pre inside .code-block */
+.article-body .code-block pre {
+    border: none;
+    background: none;
 }
 
 .article-body pre code {
