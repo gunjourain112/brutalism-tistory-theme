@@ -826,7 +826,7 @@ body {
 }
 
 [data-theme="dark"] .code-block code {
-    color: #f7f7f7b3;
+    color: #e0e0e0;
 }
 
 /* Force remove ALL backgrounds from code elements */
@@ -960,7 +960,7 @@ body {
     font-style: italic;
 }
 
-/* Keywords - Bold Cyan */
+/* Keywords - Cyan */
 [data-theme="dark"] .token.keyword,
 [data-theme="dark"] .token.control,
 [data-theme="dark"] .token.directive,
@@ -968,7 +968,6 @@ body {
 [data-theme="dark"] .token.storage,
 [data-theme="dark"] .token.important {
     color: #93d7f1;
-    font-weight: 700;
 }
 
 /* Functions - Yellow */
@@ -976,7 +975,6 @@ body {
 [data-theme="dark"] .token.method,
 [data-theme="dark"] .token.function-name {
     color: #ffda98;
-    font-weight: 600;
 }
 
 /* Strings - Peach */
@@ -994,13 +992,12 @@ body {
     color: #D4CE41;
 }
 
-/* Types & Classes - White */
+/* Types & Classes - Cyan (builtin types like int64, bool) */
 [data-theme="dark"] .token.class-name,
 [data-theme="dark"] .token.type-name,
 [data-theme="dark"] .token.builtin,
 [data-theme="dark"] .token.namespace {
-    color: #f7f7f7;
-    font-weight: 600;
+    color: #93d7f1;
 }
 
 /* Tags - White */
@@ -1010,20 +1007,24 @@ body {
     font-weight: 700;
 }
 
-/* Attributes - Peach */
+/* Attributes - Peach (struct fields like Bitmap) */
 [data-theme="dark"] .token.attr-name,
 [data-theme="dark"] .token.property {
     color: #ffc093;
 }
 
-/* Variables - White */
+/* Variables & Parameters - Toned down white (function parameters like userID) */
 [data-theme="dark"] .token.variable,
 [data-theme="dark"] .token.parameter {
-    color: #f7f7f7;
+    color: #c0c0c0;
 }
 
-/* Operators & Punctuation - Light Gray */
-[data-theme="dark"] .token.operator,
+/* Operators - Semi-transparent white */
+[data-theme="dark"] .token.operator {
+    color: #f7f7f7b3;
+}
+
+/* Punctuation & Delimiters - Semi-transparent white (dots, parentheses) */
 [data-theme="dark"] .token.entity,
 [data-theme="dark"] .token.url,
 [data-theme="dark"] .token.punctuation,
