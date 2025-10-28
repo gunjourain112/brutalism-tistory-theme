@@ -353,6 +353,11 @@ body {
     box-shadow: 8px 8px 0 var(--accent);
 }
 
+/* Hide detail by default, show card */
+.article-detail {
+    display: none;
+}
+
 .article-number {
     font-family: var(--font-mono);
     font-size: 3rem;
