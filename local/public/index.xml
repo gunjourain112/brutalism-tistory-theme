@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+  <information>
+    <name>Brutalism Dev Blog</name>
+    <version>1.0</version>
+    <description><![CDATA[브루탈리즘 스타일의 개발자 블로그 테마]]></description>
+    <license><![CDATA[MIT License]]></license>
+  </information>
+  <author>
+    <name>gunjourain</name>
+    <homepage>https://github.com/gunjourain</homepage>
+    <email>contact@example.com</email>
+  </author>
+  <default>
+    <recentEntries>10</recentEntries>
+    <recentComments>5</recentComments>
+    <recentTrackbacks>5</recentTrackbacks>
+    <itemsOnGuestbook>10</itemsOnGuestbook>
+    <tagsInCloud>30</tagsInCloud>
+    <sortInCloud>3</sortInCloud>
+    <expandComment>0</expandComment>
+    <expandTrackback>0</expandTrackback>
+    <lengthOfRecentNotice>25</lengthOfRecentNotice>
+    <lengthOfRecentEntry>27</lengthOfRecentEntry>
+    <lengthOfRecentComment>30</lengthOfRecentComment>
+    <lengthOfRecentTrackback>30</lengthOfRecentTrackback>
+    <lengthOfLink>30</lengthOfLink>
+    <showListOnCategory>1</showListOnCategory>
+    <showListOnArchive>1</showListOnArchive>
+    <showListOnIndex>1</showListOnIndex>
+    <entriesOnRecent>10</entriesOnRecent>
+    <commentMessage>
+      <none>댓글이 없습니다.</none>
+      <single>댓글 <span class="cnt">#</span>개</single>
+    </commentMessage>
+    <trackbackMessage>
+      <none>받은 트랙백이 없습니다.</none>
+      <single>트랙백 <span class="cnt">#</span>개</single>
+    </trackbackMessage>
+    <tree>
+      <color>000000</color>
+      <bgColor>ffffff</bgColor>
+      <activeColor>000000</activeColor>
+      <activeBgColor>eeeeee</activeBgColor>
+      <labelLength>27</labelLength>
+      <showValue>1</showValue>
+    </tree>
+    <contentWidth>1400</contentWidth>
+  </default>
+</skin>

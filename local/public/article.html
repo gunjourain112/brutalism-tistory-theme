@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roaring Bitmap으로 메모리 사용량 90% 절감하기 - Brutalism Dev Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <span class="logo-bracket">[</span>
+                        <span class="logo-text">SENIOR.DEV</span>
+                        <span class="logo-bracket">]</span>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">/articles</a>
+                    <a href="archive.html" class="nav-link">/archive</a>
+                    <button class="theme-toggle" id="themeToggle">
+                        <span class="theme-icon">◐</span>
+                    </button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span class="hamburger">☰</span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Reading Progress -->
+    <div class="reading-progress"></div>
+
+    <!-- Article -->
+    <main class="article-main">
+        <div class="container-narrow">
+            <article class="article-detail">
+                <!-- Article Header -->
+                <header class="article-detail-header">
+                    <div class="article-meta-large">
+                        <span class="article-date">2025.10.15</span>
+                        <span class="article-tag">#PERFORMANCE</span>
+                        <span class="read-time">15 MIN READ</span>
+                    </div>
+                    <h1 class="article-detail-title">
+                        ROARING BITMAP으로<br>
+                        메모리 사용량<br>
+                        <span class="highlight">90% 절감하기</span>
+                    </h1>
+                    <p class="article-lead">
+                        월 1억 건의 사용자 세그먼트 데이터를 처리하는 시스템에서 Roaring Bitmap을 도입하여 
+                        메모리 사용량을 대폭 줄이고 쿼리 성능을 10배 향상시킨 실전 경험을 공유합니다.
+                    </p>
+                </header>
+
+                <!-- Article Content -->
+                <div class="article-body">
+                    <section class="content-section">
+                        <h2>// 문제_상황</h2>
+                        <p>
+                            기존 시스템은 사용자 ID를 <code>Set&lt;int64&gt;</code>로 관리했습니다. 
+                            사용자가 1억 명을 넘어가면서 메모리 사용량이 급증했고, 서버 비용이 월 $2,000을 초과했습니다.
+                        </p>
+
+                        <div class="callout">
+                            <div class="callout-icon">⚠</div>
+                            <div class="callout-content">
+                                <strong>핵심 문제:</strong> 1억 개의 int64를 저장하면 약 800MB의 메모리가 필요합니다.
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>// 해결_방법</h2>
+                        <p>
+                            Roaring Bitmap은 정수 집합을 압축하여 저장하는 자료구조입니다. 
+                            특히 연속된 정수나 클러스터링된 데이터에서 압축률이 뛰어납니다.
+                        </p>
+
+                        <h3>구현_코드</h3>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-lang">GO</span>
+                                <button class="code-copy">COPY</button>
+                            </div>
+                            <pre><code>// Before: 기존 방식
+type UserSegment struct {
+    UserIDs map[int64]bool  // 800MB
+}
+
+func (s *UserSegment) Contains(userID int64) bool {
+    return s.UserIDs[userID]
+}
+
+// After: Roaring Bitmap
+import "github.com/RoaringBitmap/roaring"
+
+type UserSegment struct {
+    Bitmap *roaring.Bitmap  // 80MB (90% 절감)
+}
+
+func (s *UserSegment) Contains(userID uint32) bool {
+    return s.Bitmap.Contains(userID)
+}
+
+func (s *UserSegment) Add(userID uint32) {
+    s.Bitmap.Add(userID)
+}
+
+func (s *UserSegment) Union(other *UserSegment) *UserSegment {
+    result := roaring.Or(s.Bitmap, other.Bitmap)
+    return &UserSegment{Bitmap: result}
+}</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h3>성능_비교</h3>
+                        <div class="table-wrapper">
+                            <table class="brutal-table">
+                                <thead>
+                                    <tr>
+                                        <th>항목</th>
+                                        <th>기존 (SET)</th>
+                                        <th>ROARING BITMAP</th>
+                                        <th>개선율</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>메모리 사용량</td>
+                                        <td>800 MB</td>
+                                        <td>80 MB</td>
+                                        <td class="highlight-cell">90% ↓</td>
+                                    </tr>
+                                    <tr>
+                                        <td>조회 속도</td>
+                                        <td>120 ms</td>
+                                        <td>12 ms</td>
+                                        <td class="highlight-cell">10배 ↑</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Union 연산</td>
+                                        <td>450 ms</td>
+                                        <td>35 ms</td>
+                                        <td class="highlight-cell">13배 ↑</td>
+                                    </tr>
+                                    <tr>
+                                        <td>서버 비용</td>
+                                        <td>$2,000/월</td>
+                                        <td>$400/월</td>
+                                        <td class="highlight-cell">80% ↓</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>// 실전_적용_팁</h2>
+                        <ul class="brutal-list">
+                            <li><strong>직렬화:</strong> Roaring Bitmap은 바이너리 직렬화를 지원하여 Redis나 파일에 효율적으로 저장 가능</li>
+                            <li><strong>병렬 처리:</strong> 여러 Bitmap을 동시에 처리할 때 goroutine 활용</li>
+                            <li><strong>캐싱 전략:</strong> 자주 사용되는 세그먼트는 메모리에 캐싱</li>
+                            <li><strong>모니터링:</strong> 압축률과 메모리 사용량을 지속적으로 모니터링</li>
+                        </ul>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>// 주의사항</h2>
+                        <div class="callout warning">
+                            <div class="callout-icon">!</div>
+                            <div class="callout-content">
+                                Roaring Bitmap은 32비트 정수만 지원합니다. 64비트 ID를 사용한다면:
+                                <ul>
+                                    <li>상위 32비트를 키로, 하위 32비트를 Bitmap에 저장</li>
+                                    <li>또는 <code>roaring64</code> 라이브러리 사용</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>// 결론</h2>
+                        <div class="result-box">
+                            <div class="result-item">
+                                <div class="result-value">90%</div>
+                                <div class="result-label">메모리 절감</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-value">10X</div>
+                                <div class="result-label">성능 향상</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-value">$1,600</div>
+                                <div class="result-label">월 비용 절감</div>
+                            </div>
+                        </div>
+                        <p>
+                            대용량 정수 집합을 다루는 시스템이라면 Roaring Bitmap을 적극 검토해보시길 추천합니다.
+                        </p>
+                    </section>
+                </div>
+
+                <!-- Article Footer -->
+                <footer class="article-detail-footer">
+                    <!-- Share -->
+                    <div class="share-section">
+                        <div class="share-label">// SHARE</div>
+                        <div class="share-buttons">
+                            <button class="share-btn" data-share="twitter">TWITTER</button>
+                            <button class="share-btn" data-share="linkedin">LINKEDIN</button>
+                            <button class="share-btn" data-share="copy">COPY_LINK</button>
+                        </div>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="tags-section">
+                        <div class="tags-label">// TAGS</div>
+                        <div class="tags-list">
+                            <a href="#" class="tag">GO</a>
+                            <a href="#" class="tag">PERFORMANCE</a>
+                            <a href="#" class="tag">OPTIMIZATION</a>
+                            <a href="#" class="tag">ROARING_BITMAP</a>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="article-nav-section">
+                        <a href="#" class="article-nav-btn prev">
+                            <span class="nav-arrow">←</span>
+                            <div class="nav-content">
+                                <div class="nav-label">PREV</div>
+                                <div class="nav-title">PostgreSQL 쿼리 최적화 실전 가이드</div>
+                            </div>
+                        </a>
+                        <a href="#" class="article-nav-btn next">
+                            <div class="nav-content">
+                                <div class="nav-label">NEXT</div>
+                                <div class="nav-title">대규모 트래픽 처리를 위한 분산 시스템 설계</div>
+                            </div>
+                            <span class="nav-arrow">→</span>
+                        </a>
+                    </div>
+                </footer>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">© 2025 SENIOR.DEV // ALL_RIGHTS_RESERVED</div>
+                <div class="footer-links">
+                    <a href="#">GITHUB</a>
+                    <a href="#">TWITTER</a>
+                    <a href="#">LINKEDIN</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

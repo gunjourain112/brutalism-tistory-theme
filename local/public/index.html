@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brutalism Dev Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-bracket">[</span>
+                    <span class="logo-text">SENIOR.DEV</span>
+                    <span class="logo-bracket">]</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link active">/articles</a>
+                    <a href="archive.html" class="nav-link">/archive</a>
+                    <button class="theme-toggle" id="themeToggle">
+                        <span class="theme-icon">◐</span>
+                    </button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span class="hamburger">☰</span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-main">
+                    <div class="hero-label">// SENIOR BACKEND ENGINEER</div>
+                    <h1 class="hero-title">
+                        PRODUCTION<br>
+                        <span class="highlight">SYSTEMS</span><br>
+                        AT SCALE
+                    </h1>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-value">1B+</div>
+                            <div class="stat-label">REQUESTS/DAY</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">99.99%</div>
+                            <div class="stat-label">UPTIME</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">10X</div>
+                            <div class="stat-label">PERFORMANCE</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-side">
+                    <div class="terminal-box">
+                        <div class="terminal-header">
+                            <span class="terminal-dot"></span>
+                            <span class="terminal-dot"></span>
+                            <span class="terminal-dot"></span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span> cat /about.txt
+                            </div>
+                            <div class="terminal-line">
+                                분기별 고급 기술 아티클
+                            </div>
+                            <div class="terminal-line">
+                                실전 경험 · 성능 최적화
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">$</span> <span class="cursor">_</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <main class="main">
+        <div class="container">
+            <div class="main-grid">
+                <!-- Articles -->
+                <div class="articles">
+                    <div class="section-header">
+                        <h2 class="section-title">LATEST_ARTICLES</h2>
+                        <div class="section-line"></div>
+                    </div>
+
+                    <!-- Article 1 -->
+                    <article class="article-card">
+                        <div class="article-number">01</div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-date">2025.10.15</span>
+                                <span class="article-tag">#PERFORMANCE</span>
+                            </div>
+                            <h3 class="article-title">
+                                <a href="article.html">Roaring Bitmap으로 메모리 사용량 90% 절감하기</a>
+                            </h3>
+                            <p class="article-excerpt">
+                                월 1억 건의 사용자 세그먼트 데이터를 처리하는 시스템에서 Roaring Bitmap을 도입하여 
+                                메모리 사용량을 대폭 줄이고 쿼리 성능을 10배 향상시킨 실전 경험
+                            </p>
+                            <div class="article-footer">
+                                <span class="read-time">15 MIN READ</span>
+                                <a href="article.html" class="read-more">READ_MORE →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="article-card">
+                        <div class="article-number">02</div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-date">2025.07.20</span>
+                                <span class="article-tag">#ARCHITECTURE</span>
+                            </div>
+                            <h3 class="article-title">
+                                <a href="article.html">대규모 트래픽 처리를 위한 분산 시스템 설계</a>
+                            </h3>
+                            <p class="article-excerpt">
+                                초당 10만 요청을 처리하는 시스템을 설계하고 운영하면서 겪은 장애 대응 경험과 
+                                아키텍처 개선 과정을 상세히 다룹니다
+                            </p>
+                            <div class="article-footer">
+                                <span class="read-time">20 MIN READ</span>
+                                <a href="article.html" class="read-more">READ_MORE →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="article-card">
+                        <div class="article-number">03</div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-date">2025.04.10</span>
+                                <span class="article-tag">#DATABASE</span>
+                            </div>
+                            <h3 class="article-title">
+                                <a href="article.html">PostgreSQL 쿼리 최적화 실전 가이드</a>
+                            </h3>
+                            <p class="article-excerpt">
+                                프로덕션 환경에서 발생한 슬로우 쿼리를 분석하고 인덱스 전략, 파티셔닝, 
+                                쿼리 리팩토링을 통해 응답 시간을 100배 개선한 사례
+                            </p>
+                            <div class="article-footer">
+                                <span class="read-time">18 MIN READ</span>
+                                <a href="article.html" class="read-more">READ_MORE →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- View All Button -->
+                    <div class="view-all-section">
+                        <a href="archive.html" class="view-all-btn">
+                            <span>VIEW_ALL_ARTICLES</span>
+                            <span class="arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-box">
+                        <h3 class="sidebar-title">// SEARCH</h3>
+                        <div class="search-box">
+                            <input type="text" placeholder="SEARCH..." class="search-input">
+                            <button class="search-btn">→</button>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="sidebar-box">
+                        <h3 class="sidebar-title">// CATEGORIES</h3>
+                        <ul class="category-list">
+                            <li><a href="category.html">> Performance <span>[3]</span></a></li>
+                            <li><a href="category.html">> Architecture <span>[5]</span></a></li>
+                            <li><a href="category.html">> Database <span>[4]</span></a></li>
+                            <li><a href="category.html">> DevOps <span>[2]</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="sidebar-box">
+                        <h3 class="sidebar-title">// TAGS</h3>
+                        <div class="tag-grid">
+                            <a href="#" class="tag">Go</a>
+                            <a href="#" class="tag">PostgreSQL</a>
+                            <a href="#" class="tag">Redis</a>
+                            <a href="#" class="tag">K8s</a>
+                            <a href="#" class="tag">Performance</a>
+                            <a href="#" class="tag">Scale</a>
+                        </div>
+                    </div>
+
+                    <!-- Popular Posts -->
+                    <div class="sidebar-box">
+                        <h3 class="sidebar-title">// POPULAR</h3>
+                        <ul class="popular-list">
+                            <li><a href="article.html">→ Roaring Bitmap 메모리 절감</a></li>
+                            <li><a href="article.html">→ Redis 캐싱 전략</a></li>
+                            <li><a href="article.html">→ Go 동시성 패턴</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Tech Stack -->
+                    <div class="sidebar-box">
+                        <h3 class="sidebar-title">// TECH_STACK</h3>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Go</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">Redis</span>
+                            <span class="tech-badge">Kubernetes</span>
+                            <span class="tech-badge">Docker</span>
+                            <span class="tech-badge">gRPC</span>
+                        </div>
+                    </div>
+
+                    <!-- Activity -->
+                    <div class="sidebar-box">
+                        <h3 class="sidebar-title">// ACTIVITY</h3>
+                        <div class="activity-graph">
+                            <div class="activity-row">
+                                <div class="activity-cell level-0"></div>
+                                <div class="activity-cell level-1"></div>
+                                <div class="activity-cell level-2"></div>
+                                <div class="activity-cell level-3"></div>
+                                <div class="activity-cell level-4"></div>
+                                <div class="activity-cell level-2"></div>
+                                <div class="activity-cell level-0"></div>
+                            </div>
+                            <div class="activity-row">
+                                <div class="activity-cell level-1"></div>
+                                <div class="activity-cell level-3"></div>
+                                <div class="activity-cell level-4"></div>
+                                <div class="activity-cell level-2"></div>
+                                <div class="activity-cell level-1"></div>
+                                <div class="activity-cell level-3"></div>
+                                <div class="activity-cell level-0"></div>
+                            </div>
+                            <div class="activity-row">
+                                <div class="activity-cell level-2"></div>
+                                <div class="activity-cell level-4"></div>
+                                <div class="activity-cell level-3"></div>
+                                <div class="activity-cell level-1"></div>
+                                <div class="activity-cell level-2"></div>
+                                <div class="activity-cell level-4"></div>
+                                <div class="activity-cell level-1"></div>
+                            </div>
+                        </div>
+                        <div class="activity-label">14 POSTS THIS QUARTER</div>
+                    </div>
+
+                    <!-- Subscribe (Tistory) -->
+                    <div class="sidebar-box newsletter-box">
+                        <h3 class="sidebar-title">// SUBSCRIBE</h3>
+                        <p class="newsletter-desc">새 글 알림 받기</p>
+                        <!-- 티스토리 구독 버튼: [##_subscribe_##] -->
+                        <div class="subscribe-buttons">
+                            <a href="[##_blog_link_##]/rss" class="subscribe-btn" target="_blank">
+                                <span>RSS</span>
+                            </a>
+                            <a href="javascript:;" onclick="window.open('[##_blog_link_##]/admin/center/','_blank')" class="subscribe-btn">
+                                <span>이웃추가</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Status -->
+                    <div class="sidebar-box status-box">
+                        <h3 class="sidebar-title">// STATUS</h3>
+                        <div class="status-item">
+                            <span class="status-dot active"></span>
+                            <span>SYSTEM_ONLINE</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot"></span>
+                            <span>LAST_POST: 2025.10.15</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">© 2025 SENIOR.DEV // ALL_RIGHTS_RESERVED</div>
+                <div class="footer-links">
+                    <a href="#">GITHUB</a>
+                    <a href="#">TWITTER</a>
+                    <a href="#">LINKEDIN</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
